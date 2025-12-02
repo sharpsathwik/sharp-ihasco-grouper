@@ -78,7 +78,7 @@ This tool will:
 # FILE UPLOADER
 # ----------------------------
 uploaded_files = st.file_uploader(
-    "Upload up to 5 employee ZIP files from iHasco",
+    "Upload up to 50 employee ZIP files from iHasco",
     type=["zip"],
     accept_multiple_files=True
 )
@@ -89,8 +89,8 @@ uploaded_files = st.file_uploader(
 if uploaded_files:
     st.info(f"You have uploaded **{len(uploaded_files)}** ZIP file(s).")
 
-    if len(uploaded_files) > 5:
-        st.warning("⚠️ Please upload a maximum of 5 employee ZIPs at a time.")
+    if len(uploaded_files) > 50:
+        st.warning("⚠️ Please upload a maximum of 50 employee ZIPs at a time.")
     else:
         if st.button("🔄 Process & Download Grouped ZIP"):
             course_groups = defaultdict(list)
